@@ -26,6 +26,8 @@ class NotificationServices::HubotService < NotificationService
   end
 
   def create_notification(problem)
-    HTTParty.post(url, body: { message: message_for_hubot(problem), room: room_id })
+    result = HTTParty.post(url, body: { message: message_for_hubot(problem), room: room_id })
+    binding.irb
+    result
   end
 end

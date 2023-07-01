@@ -2,7 +2,9 @@ version: "3"
 
 services:
   errbit:
-    image: errbit/errbit:latest
+    build: .
+    stdin_open: true
+    tty: true
     ports:
       - "8080:8080"
     depends_on:
@@ -11,6 +13,7 @@ services:
       - PORT=8080
       - RACK_ENV=production
       - MONGO_URL=mongodb://mongo:27017/errbit
+      - SECRET_KEY_BASE=my$ecre7key123
   mongo:
     image: mongo:4.1
     ports:
