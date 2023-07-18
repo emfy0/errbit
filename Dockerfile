@@ -23,7 +23,7 @@ COPY [".ruby-version", "Gemfile", "Gemfile.lock", "/app/"]
 
 RUN apk add --no-cache --virtual build-dependencies build-base \
   && bundle config build.nokogiri --use-system-libraries \
-  && bundle config set without 'test development no_docker' \
+  && bundle config set without 'no_docker' \
   && bundle install -j "$(getconf _NPROCESSORS_ONLN)" --retry 5 \
   && bundle clean --force \
   && apk del build-dependencies

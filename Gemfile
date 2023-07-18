@@ -50,6 +50,8 @@ gem 'httparty'
 # Flowdock
 gem 'flowdock'
 
+gem 'rspec_junit_formatter'
+
 gem 'ri_cal'
 gem 'json', platform: 'jruby'
 
@@ -87,10 +89,6 @@ group :test do
   gem 'email_spec'
   gem 'timecop'
   gem 'coveralls', require: false
-end
-
-group :no_docker, :test, :development do
-  gem 'mini_racer', platform: :ruby # C Ruby (MRI) or Rubinius, but NOT Windows
 end
 
 gem 'puma'

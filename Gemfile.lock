@@ -504,7 +504,6 @@ DEPENDENCIES
   launchy
   listen (~> 3.0.5)
   meta_request
-  mini_racer
   mongoid (= 6.0.3)
   mongoid-rspec
   omniauth
@@ -533,6 +532,7 @@ DEPENDENCIES
   sass-rails
   sucker_punch
   timecop
+  rspec_junit_formatter
   uglifier
   underscore-rails
   useragent
