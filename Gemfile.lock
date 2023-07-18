@@ -532,7 +532,6 @@ DEPENDENCIES
   sass-rails
   sucker_punch
   timecop
-  rspec_junit_formatter
   uglifier
   underscore-rails
   useragent

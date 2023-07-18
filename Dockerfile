@@ -7,7 +7,6 @@ WORKDIR /app
 
 # throw errors if Gemfile has been modified since Gemfile.lock
 RUN echo "gem: --no-document" >> /etc/gemrc \
-  && bundle config --global frozen 1 \
   && bundle config --global disable_shared_gems false \
   && gem update --system "$RUBYGEMS_VERSION" \
   && gem install bundler --version "$BUNDLER_VERSION" \
